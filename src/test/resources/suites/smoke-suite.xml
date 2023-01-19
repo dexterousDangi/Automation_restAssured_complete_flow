@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testvagrant-api-smoke-suite" verbose="8">
+	<listeners>
+		<listener class-name="testvagrant.api.listeners.CustomReporter" />
+	</listeners>
+
+	<test name="RCBTest">
+		<classes>
+			<class name="testvagrant.api.test.rcb.RCBTest">
+				<methods>
+					<include name="validate_that_team_has_only_4_foreign_players" />
+					<include name="validate_that_there_is_atleast_1_wicketkeeper_in_team" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
